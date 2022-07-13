@@ -8,10 +8,12 @@
 }
 
 main{
+    flex-wrap: wrap;
     display: flex;
 }
 
 #evaluation-form{
+    
     flex-direction: column;
     display: flex;
     width: 675px;
