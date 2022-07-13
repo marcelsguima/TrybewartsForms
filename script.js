@@ -1,11 +1,12 @@
-function login() {
-  const email = document.getElementById("email");
-  const senha = document.getElementById("senha");
+function login(e) {
+  e.preventDefault();
+  const email = document.getElementById('email');
+  const senha = document.getElementById('senha');
 
-  if (email.value === "tryber@teste.com" && senha.value === "123456") {
-    console.log("deu certo");
+  if (email.value === 'tryber@teste.com' && senha.value === '123456') {
+    console.log('deu certo');
   }
 }
 
-const button = document.getElementById("entrar");
-button.addEventListener("click", login);
+const button = document.getElementById('entrar');
+button.addEventListener('click', login);
