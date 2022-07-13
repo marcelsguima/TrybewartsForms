@@ -1,16 +1,21 @@
-const button = document.getElementById('entrar');
+const button = document.getElementById("entrar");
 
 function login(e) {
   e.preventDefault();
 
-  const email = document.getElementById('email');
-  const senha = document.getElementById('senha');
+  const email = document.getElementById("email");
+  const senha = document.getElementById("senha");
 
-  if (email.value === 'tryber@teste.com' && senha.value === '123456') {
-    alert('Olá, Tryber!');
+  if (email.value === "tryber@teste.com" && senha.value === "123456") {
+    alert("Olá, Tryber!");
   } else {
-    alert('Email ou senha inválidos.');
+    alert("Email ou senha inválidos.");
   }
 }
 
-button.addEventListener('click', login);
+button.addEventListener("click", login);
+
+const agreement = document.getElementById("");
+let send = document.getElementById("submit-btn");
+
+function checkSend(e) {}
