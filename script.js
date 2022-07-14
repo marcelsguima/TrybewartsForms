@@ -15,7 +15,9 @@ function login(e) {
 
 button.addEventListener("click", login);
 
-const agreement = document.getElementById("");
+// 18
+
+const agreement = document.getElementById("agreement");
 let send = document.getElementById("submit-btn");
 
 function checkSend(e) {}
