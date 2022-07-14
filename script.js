@@ -13,11 +13,16 @@ function login(e) {
   }
 }
 
-button.addEventListener("click", login);
 
 // 18
 
-const agreement = document.getElementById("agreement");
-let send = document.getElementById("submit-btn");
+function checkSend(e) {
+  const agreement = document.getElementById("agreement");
+  const send = document.getElementById("submit-btn");
+  if (agreement.checked === false) {
+    e.preventDefault();
+  }
+}
 
-function checkSend(e) {}
+button.addEventListener("click", login);
+send.addEventListener("click", checkSend);
