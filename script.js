@@ -1,8 +1,11 @@
+const textarea = document.getElementById('textarea');
 const button = document.getElementById('entrar');
+const agreement = document.getElementById('agreement');
+const send = document.getElementById('submit-btn');
+send.disabled = true;
 
 function login(e) {
   e.preventDefault();
-
   const email = document.getElementById('email');
   const senha = document.getElementById('senha');
 
@@ -13,12 +16,6 @@ function login(e) {
   }
 }
 
-// 18
-
-const agreement = document.getElementById('agreement');
-const send = document.getElementById('submit-btn');
-send.disabled = true;
-
 function validador() {
   if (agreement.checked === true) {
     send.disabled = false;
@@ -27,18 +24,16 @@ function validador() {
   }
 }
 
-button.addEventListener('click', login);
+function contaCaracter() {
+  const text = document.getElementById('textarea').value;
+  const contador = document.getElementById('counter');
+  const numMax = 500;
+  const numMin = 0;
+  if (text.length <= numMax && text.length >= numMin) {
+    contador.innerText = numMax - text.length;
+  }
+}
 
 agreement.addEventListener('click', validador);
-
-// 19
-
-// function countChar() {
-//   const val = document.getElementById('textarea');
-//   const len = val.value.length;
-//   if (len >= 500) {
-//     val.value = val.value.substring(0, 500);
-//   } else {
-//     ('#charNum').text(500 - len);
-//   }
-// }
+button.addEventListener('click', login);
+textarea.addEventListener('keyup', contaCaracter);
