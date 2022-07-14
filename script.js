@@ -30,3 +30,15 @@ function validador() {
 button.addEventListener('click', login);
 
 agreement.addEventListener('click', validador);
+
+// 19
+
+// function countChar() {
+//   const val = document.getElementById('textarea');
+//   const len = val.value.length;
+//   if (len >= 500) {
+//     val.value = val.value.substring(0, 500);
+//   } else {
+//     ('#charNum').text(500 - len);
+//   }
+// }
