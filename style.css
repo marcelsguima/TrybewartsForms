@@ -64,7 +64,16 @@ main {
   font-size: 50px;
 }
 
-#email,#senha {
+#email {
+  margin-right: 20px;
+  height: 20px;
+  width: 160px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+#senha {
   margin-right: 20px;
   height: 20px;
   width: 160px;
