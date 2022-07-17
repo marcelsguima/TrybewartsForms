@@ -4,7 +4,7 @@
   height: 100px;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 30px;
+  padding: 0 30px;
 }
 
 body {
@@ -22,7 +22,7 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #efefef;
+  background-color: rgb(239, 239, 239);
 }
 
 #evaluation-form {
@@ -64,8 +64,7 @@ main {
   font-size: 50px;
 }
 
-#email,
-#senha {
+#email, #senha {
   margin-right: 20px;
   height: 20px;
   width: 160px;
@@ -79,17 +78,17 @@ main {
   height: 40px;
   border-radius: 9px;
   font-size: 15px;
-  font-weight: bold;
-  background-color: #4e2c83;
+  font-weight: 900;
+  background-color: rgb(78, 44, 131);
   color: white;
 }
 
 footer {
-  background-color: #3c404a;
+  background-color: rgb(60, 64, 74);
   display: flex;
   align-items: center;
   justify-content: center;
   height: 50px;
-  color: #ececec;
+  color: rgb(236, 236, 236);
   font-size: 20px;
 }
