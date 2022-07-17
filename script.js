@@ -2,9 +2,9 @@ const textarea = document.getElementById('textarea');
 const button = document.getElementById('entrar');
 const agreement = document.getElementById('agreement');
 const send = document.getElementById('submit-btn');
-send.disabled = true;
 const formData = document.querySelector('#form-data');
 const materias = document.getElementsByName('materias');
+send.disabled = true;
 let controle = 0;
 let array = '';
 
