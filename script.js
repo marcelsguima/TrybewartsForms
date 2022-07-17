@@ -1,11 +1,22 @@
-/* eslint-disable sonarjs/cognitive-complexity */
-/* eslint-disable max-len */
 const textarea = document.getElementById('textarea');
 const button = document.getElementById('entrar');
 const agreement = document.getElementById('agreement');
 const send = document.getElementById('submit-btn');
 send.disabled = true;
 const formData = document.querySelector('#form-data');
+const materias = document.getElementsByName('materias');
+let controle = 0;
+let array = '';
+
+function setMaterias(i) {
+  if (controle === 1) {
+    array += `${materias[i].value}`;
+  } else if (materias.length === 1) {
+    array += `${materias[i].value}`;
+  } else {
+    array += `, ${materias[i].value}`;
+  }
+}
 
 function login(e) {
   e.preventDefault();
@@ -56,7 +67,8 @@ function getNome() {
   const divNome = criaElemento('div', 'divNome');
   const nome = criaElemento('p', 'titulo');
   formData.appendChild(divNome);
-  nome.innerText = `Nome: ${document.querySelector('#input-name').value} ${document.querySelector('#input-lastname').value}`;
+  nome.innerText = `Nome: ${document.querySelector('#input-name').value} ${
+    document.querySelector('#input-lastname').value}`;
   divNome.appendChild(nome);
 }
 
@@ -64,7 +76,8 @@ function getAvaliacao() {
   const divAvaliacao = criaElemento('div', 'divAvaliacao');
   const avaliacao = criaElemento('p', 'titulo');
   formData.appendChild(divAvaliacao);
-  avaliacao.innerText = `Avaliação: ${document.querySelector('#eval-btns input[name="rate"]:checked').value}`;
+  avaliacao.innerText = `Avaliação: ${
+    document.querySelector('#eval-btns input[name="rate"]:checked').value}`;
   divAvaliacao.appendChild(avaliacao);
 }
 
@@ -88,7 +101,8 @@ function getfamilia() {
   const divFamilia = criaElemento('div', 'divFamilia');
   const familia = criaElemento('p', 'titulo');
   formData.appendChild(divFamilia);
-  familia.innerText = `Família: ${document.querySelector('#end-family div input[name="family"]:checked').value} `;
+  familia.innerText = `Família: ${
+    document.querySelector('#end-family div input[name="family"]:checked').value} `;
   divFamilia.appendChild(familia);
 }
 
@@ -101,18 +115,10 @@ function getObs() {
 }
 
 function setConteudo() {
-  const materias = document.getElementsByName('materias');
-  let controle = 0;
-  let array = '';
   for (let i = 0; i < materias.length; i += 1) {
     if (materias[i].checked) {
       controle += 1;
-      if (controle === 1) {
-        array += `${materias[i].value}`;
-        console.log('fui acionado');
-      } else if (materias.length === 1) {
-        array += `${materias[i].value}`;
-      } else { array += `, ${materias[i].value}`; }
+      setMaterias(i);
     }
   }
   return array;
