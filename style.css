@@ -3,6 +3,11 @@
   background-color: rgb(50, 167, 145);
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .trybewarts-login {
   display: flex;
 }
@@ -29,4 +34,14 @@ main {
 #end-family {
   display: flex;
   flex-direction: column;
+}
+
+#none {
+  display: none;
+}
+
+.form-data {
+  flex-direction: column;
+  display: flex;
+  width: 675px;
 }
